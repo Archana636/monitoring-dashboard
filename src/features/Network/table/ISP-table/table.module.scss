@@ -1,0 +1,58 @@
+@use "../../../../assets/style/main.scss" as *;
+
+%title {
+  font-size: 2rem;
+  margin: {
+    left: 15px;
+  }
+  color: var(grey-600);
+  font-weight: 500;
+}
+%row-data {
+  font-size: 1.4rem;
+}
+.container {
+  overflow: hidden;
+  .tableTitle {
+    text-align: center;
+    font-size: 2rem;
+    color: var(--grey-800);
+    margin: {
+      top: 6px;
+      bottom: 12px;
+    }
+  }
+  hr {
+    width: 90%;
+    background: var(--grey-600);
+    margin: 0 auto;
+    border-width: 0.3px;
+  }
+  padding: 10px 20px;
+}
+.table {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  column-gap: 20px;
+  .col {
+    .header {
+      display: flex;
+      align-items: center;
+      margin: {
+        top: 20px;
+        bottom: 5px;
+      }
+      p {
+        font-size: 1.5rem;
+        margin: {
+          left: 15px;
+        }
+        color: var(--grey-800);
+        font-weight: 500;
+      }
+      icon {
+        font-size: 2rem;
+      }
+    }
+  }
+}

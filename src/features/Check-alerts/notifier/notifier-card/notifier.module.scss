@@ -1,0 +1,127 @@
+@use "../../../../assets/style/main.scss" as *;
+
+%icon-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  p {
+    font-size: $typography-size-12;
+    text-transform: uppercase;
+    font-weight: 700;
+
+    @include screen-height-1024-up {
+      font-size: $typography-size-16;
+      margin: {
+        top: 5px;
+        // padding: 5px 5px;
+        // bottom: 5px;
+        // padding: 20px;
+      }
+    }
+  }
+}
+%notifier {
+  display: flex;
+  align-items: center;
+  padding: 10px 10px;
+  margin: 0 auto;
+  border-radius: 5px;
+  article {
+    width: 100%;
+    p {
+      padding-bottom: 5px;
+      display: -webkit-box;
+      -webkit-line-clamp: 1;
+      -webkit-box-orient: vertical;
+      overflow: hidden;
+    }
+    .header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+  }
+  @include screen-height-1024-up {
+    padding: 5px 20px; //padding for checkalert screen
+  }
+}
+%notifierInfo {
+  h2 {
+    font-size: $typography-size-16;
+    margin: {
+      bottom: 3px;
+      // margin-right: 10px;
+    }
+
+    @include screen-height-600-up {
+      font-size: $typography-size-14;
+      margin: {
+        bottom: 2px;
+      }
+    }
+    @include screen-height-1024-up {
+      font-size: $typography-size-20;
+      margin: {
+        bottom: 5px;
+      }
+    }
+  }
+  p {
+    font-size: $typography-size-24;
+    font-weight: 600;
+    color: var(--grey-900);
+    line-height: 0.8;
+
+    span:first-child {
+      font-weight: 900;
+    }
+    @include screen-height-600-up {
+      font-size: $typography-size-22;
+    }
+    @include screen-height-1024-up {
+      font-size: $typography-size-26;
+    }
+  }
+}
+.criticalNotifier {
+  @extend %notifier;
+  background: var(--notify-critical-light);
+  .iconContainer {
+    @extend %icon-container;
+    color: var(--notify-critical-dark);
+    margin: {
+      right: 10px;
+    }
+  }
+  .notifierInfo {
+    @extend %notifierInfo;
+    h2 {
+      color: var(--notify-critical-dark);
+    }
+  }
+}
+.warnNotifier {
+  @extend %notifier;
+  background: var(--notify-warn-light);
+  .iconContainer {
+    @extend %icon-container;
+    margin: {
+      right: 10px; //warn
+    }
+    color: var(--notify-warn-dark);
+  }
+  .notifierInfo {
+    @extend %notifierInfo;
+    h2 {
+      color: var(--notify-warn-dark);
+    }
+  }
+}
+@keyframes slide-in {
+  from {
+    transform: translateX(20px);
+  }
+  to {
+    transform: translateX(0);
+  }
+}

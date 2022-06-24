@@ -1,0 +1,54 @@
+@use "../../../../assets/style/main.scss" as *;
+
+%table {
+  h2 {
+    font-size: $typography-size-16;
+    color: var(--ash);
+    text-align: center;
+    margin: {
+      top: 6px;
+      bottom: 10px;
+    }
+    @include screen-height-720-up {
+      font-size: $typography-size-20;
+    }
+    @include screen-height-900-up {
+      margin: 10px 0;
+    }
+    @include screen-height-1024-up {
+      margin: 0.5px;
+      font-size: $typography-size-66;
+    }
+  }
+  hr {
+    width: 90%;
+    margin: {
+      left: auto;
+      right: auto;
+      bottom: 1px;
+    }
+    border: 0;
+    border-bottom: 0.3px solid var(--grey-100);
+  }
+}
+.container {
+  width: 100%;
+  @include screen-laptop-sm-up {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+.table_1 {
+  @extend %table;
+  @include UI-glass-bg;
+  margin: {
+    right: 5px;
+  }
+}
+.table_2 {
+  @extend %table;
+  @include UI-glass-bg;
+  margin: {
+    left: 5px;
+  }
+}

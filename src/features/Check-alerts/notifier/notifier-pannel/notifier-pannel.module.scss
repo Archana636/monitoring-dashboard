@@ -1,0 +1,49 @@
+@use "../../../../assets/style/main.scss" as *;
+
+.pannel {
+  @include UI-glass-bg;
+  hr {
+    border: 0;
+    border-bottom: 0.2px solid var(--ash);
+    opacity: 0.5;
+    margin: {
+      top: 15px;
+      // padding: 10px;
+    }
+  }
+}
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  h2 {
+    font-size: $typography-size-22;
+    text-transform: uppercase;
+    font-weight: 500;
+    margin: {
+      left: 10px;
+    }
+    @include screen-height-600-up {
+      font-size: $typography-size-18;
+    }
+    @include screen-height-1024-up {
+      font-size: $typography-size-18;
+    }
+    // @include screen-height-1080-up {
+    //   font-size: $typography-size-18;
+    // }
+  }
+}
+.notifierList {
+  overflow-x: hidden;
+  margin: {
+    top: 4px;
+    // height: 10%;/
+  }
+  > div {
+    margin: {
+      bottom: 4px;
+    }
+  }
+}

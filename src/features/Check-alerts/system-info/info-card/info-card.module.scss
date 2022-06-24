@@ -1,0 +1,60 @@
+@use "../../../../assets/style/main.scss" as *;
+
+.card {
+  @include UI-glass-bg;
+  h2 {
+    font-size: $typography-size-18;
+    margin: {
+      bottom: 10px; //instance top bottom
+    }
+    @include screen-height-600-up {
+      font-size: $typography-size-21;
+    }
+    @include screen-height-720-up {
+      font-size: $typography-size-22;
+    }
+    @include screen-height-1024-up {
+      font-size: $typography-size-22;
+    }
+  }
+}
+.boxContainer {
+  display: flex;
+}
+//boxes color
+.total {
+  color: var(--total-light);
+  background-color: var(--total);
+  margin: {
+    right: 10px;
+  }
+}
+.up {
+  color: var(--up-light);
+  background-color: var(--up);
+  margin: {
+    right: 10px;
+  }
+}
+.down {
+  color: var(--down-light);
+  background-color: var(--down);
+}
+.ok {
+  color: var(--ok-light);
+  background-color: var(--ok);
+  margin: {
+    right: 10px;
+  }
+}
+.critical {
+  color: var(--critical-light);
+  background-color: var(--critical);
+  margin: {
+    right: 10px;
+  }
+}
+.warn {
+  color: var(--warn-light);
+  background-color: var(--warn);
+}

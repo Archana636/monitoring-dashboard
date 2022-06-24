@@ -1,0 +1,61 @@
+@use "../../../../assets/style/main.scss" as *;
+
+.box {
+  border-radius: 15px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 15px; //width of instance service
+  min-width: 20px;
+  height: 25px;
+  @include screen-height-600-up {
+    min-width: 20px;
+    height: 25px;
+  }
+  @include screen-height-720-up {
+    min-width: 50px;
+    height: 50px;
+  }
+  @include screen-height-1024-up {
+    min-width: 35px;
+    height: 46px; //big screen 133 133 sizing
+  }
+  p {
+    font-size: $typography-size-18;
+    font-weight: 500;
+    line-height: 0;
+    text-transform: uppercase;
+    @include screen-height-600-up {
+      font-size: $typography-size-14;
+      margin: {
+        bottom: 15px;
+      }
+    }
+    @include screen-height-720-up {
+      font-size: $typography-size-18;
+      margin: {
+        bottom: 20px;
+      }
+    }
+    @include screen-height-1024-up {
+      font-size: $typography-size-18;
+      margin: {
+        top: 5px;
+        bottom: 15px;
+      }
+    }
+  }
+  span {
+    font-weight: 600;
+    @include screen-height-600-up {
+      font-size: $typography-size-18;
+    }
+    @include screen-height-720-up {
+      font-size: $typography-size-24;
+    }
+    @include screen-height-1024-up {
+      font-size: $typography-size-24;
+    }
+  }
+}

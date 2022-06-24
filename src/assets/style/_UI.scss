@@ -1,0 +1,12 @@
+@use "./medias-query" as *;
+
+@mixin glass-bg {
+  background: rgba(255, 255, 255, 15%);
+  box-shadow: 3.68519px 3.68519px 46.0649px 3.68519px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(45px);
+  border-radius: 20px;
+  padding: 10px 10px;
+  @include height-720-up {
+    padding: 10px;
+  }
+}

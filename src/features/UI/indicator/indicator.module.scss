@@ -1,0 +1,26 @@
+@use "../../../assets/style/main.scss" as *;
+
+.container {
+  width: 50%;
+  height: 250px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+  p {
+    margin: {
+      top: 20px;
+    }
+    font-size: 1.8rem;
+    font-weight: 400;
+    color: var(--grey-500);
+  }
+}
+.icon {
+  color: var(--grey-50);
+  font-size: 50px;
+}
+.warnIcon {
+  color: var(--error);
+}

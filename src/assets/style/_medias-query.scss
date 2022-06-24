@@ -1,0 +1,139 @@
+//---------- width ------------------------
+//mobile
+//tablet
+//----------laptop------------
+$laptop-sm: 1024px;
+$laptop-md: 1280px;
+$laptop-lg: 1366px;
+$laptop-xl: 1440px;
+$laptop-2xl: 1536px;
+//----------desktop------
+$desktop-sm: 1600px;
+$desktop-md: 1920px;
+
+// -------------------- height --------------
+$height-600: 600px;
+$height-720: 700px;
+$height-800: 800px;
+$height-900: 900px;
+$height-1024: 1024px;
+$height-1080: 1080px;
+
+// --------------------- QUERIES ------------------------
+@mixin laptop-sm-up {
+  @media (min-width: $laptop-sm) {
+    @content;
+  }
+}
+@mixin laptop-sm-down {
+  @media (max-width: $laptop-sm) {
+    @content;
+  }
+}
+//1280 - 1366
+@mixin laptop-md-up {
+  @media (min-width: $laptop-md) {
+    @content;
+  }
+}
+@mixin laptop-md-down {
+  @media (max-width: $laptop-md) {
+    @content;
+  }
+}
+//1366 - 1440
+@mixin laptop-lg-up {
+  @media (min-width: $laptop-lg) {
+    @content;
+  }
+}
+@mixin laptop-lg-down {
+  @media (max-width: $laptop-lg) {
+    @content;
+  }
+}
+//1440 - 1536
+@mixin laptop-xl-up {
+  @media (min-width: $laptop-xl) {
+    @content;
+  }
+}
+@mixin laptop-xl-down {
+  @media (max-width: $laptop-xl) {
+    @content;
+  }
+}
+
+//1536 and beyond
+@mixin laptop-2xl-up {
+  @media (min-width: $laptop-2xl) {
+    @content;
+  }
+}
+//1600 and beyond
+@mixin desktop-sm-up {
+  @media (min-width: $desktop-sm) {
+    @content;
+  }
+}
+//11920 and beyond
+@mixin desktop-md-up {
+  @media (min-width: $desktop-md) {
+    @content;
+  }
+}
+// height: 600
+@mixin height-600-down {
+  @media (max-height: $height-600) {
+    @content;
+  }
+}
+@mixin height-600-up {
+  @media (min-height: $height-600) {
+    @content;
+  }
+}
+//height 720
+@mixin height-720-down {
+  @media (max-height: $height-720) {
+    @content;
+  }
+}
+@mixin height-720-up {
+  @media (min-height: $height-720) {
+    @content;
+  }
+}
+//height 800
+@mixin height-800-down {
+  @media (max-height: $height-800) {
+    @content;
+  }
+}
+@mixin height-800-up {
+  @media (min-height: $height-800) {
+    @content;
+  }
+}
+//height 900
+@mixin height-900-down {
+  @media (max-height: $height-900) {
+    @content;
+  }
+}
+@mixin height-900-up {
+  @media (min-height: $height-900) {
+    @content;
+  }
+}
+//height 1024
+@mixin height-1024-down {
+  @media (max-height: $height-1024) {
+    @content;
+  }
+}
+@mixin height-1024-up {
+  @media (min-height: $height-1024) {
+    @content;
+  }
+}

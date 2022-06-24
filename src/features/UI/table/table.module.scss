@@ -1,0 +1,64 @@
+@use "../../../assets/style/main.scss" as *;
+
+%grid-layout {
+  display: grid;
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  column-gap: 30px;
+}
+
+.tableHeader {
+  font-size: $typography-size-20;
+  color: var(--grey-400);
+  font-weight: 500;
+  @include screen-height-1024-up {
+    font-size: $typography-size-24;
+  }
+}
+.row {
+  @extend %grid-layout;
+  width: 100%;
+  border-bottom: 0.2px solid var(--grey-300);
+  border-width: 0.2px;
+  padding: 8px 0;
+  @include screen-height-720-up {
+    padding: 11px 0;
+  }
+  @include screen-height-800-up {
+    padding: 12px 0;
+  }
+  &:last-child {
+    border-bottom: 0;
+  }
+  span {
+    font-size: $typography-size-14;
+    @include screen-height-720-up {
+      // font-size: $typography-size-14;
+    }
+    @include screen-height-900-up {
+      font-size: $typography-size-18;
+    }
+    @include screen-height-1024-up {
+      font-size: $typography-size-65;
+    }
+  }
+  span:nth-child(1) {
+    overflow: hidden;
+    white-space: nowrap;
+    // text-overflow: ellipsis;
+  }
+  span:nth-child(2) {
+    text-align: right;
+    font-weight: 500;
+    white-space: nowrap;
+    span {
+      font-size: $typography-size-12;
+      @include screen-height-720-up {
+        // font-size: $typography-size-12;
+      }
+      @include screen-height-1024-up {
+        font-size: $typography-size-18;
+      }
+    }
+  }
+}

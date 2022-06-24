@@ -1,0 +1,95 @@
+@use "../main.scss" as *;
+
+%table-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr 2fr;
+}
+.container {
+  @include screen-height-600-up {
+    padding: 0 2vw; //padding of screen
+  }
+}
+.title {
+  text-align: center;
+  font-size: $typography-size-42;
+  @include screen-height-600-up {
+    font-size: $typography-size-28;
+    padding: {
+      top: -2px;
+    }
+  }
+  @include screen-height-720-up {
+    font-size: $typography-size-42;
+  }
+  @include screen-height-1024-up {
+    font-size: $typography-size-30;
+  }
+}
+.tableContainer {
+  @include screen-laptop-md-up {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    column-gap: 10px;
+    // margin-bottom: 100px;
+  }
+  @include screen-height-600-up {
+    grid-gap: 10px;
+  }
+  @include screen-height-1024-up {
+    column-gap: 20px;
+  }
+  // @include screen-height-1060-up {
+  //   column-gap: 30px;
+  //   padding-bottom: 20px;
+  // }
+  .col {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 0.1%; //top screen padding
+    // margin-bottom: -5px;
+  }
+  .colHeader {
+    display: flex;
+    align-items: center;
+    // padding: 1px;
+    h2 {
+      font-size: $typography-size-36;
+      margin: {
+        left: 15px;
+      }
+      @include screen-height-600-up {
+        font-size: $typography-size-20;
+      }
+      @include screen-height-720-up {
+        font-size: $typography-size-22;
+      }
+    }
+  }
+}
+.systemStatus {
+  display: flex;
+  width: 100%;
+  justify-content: space-evenly;
+  // padding: 50px;
+  margin: {
+    top: 20px;
+  }
+  @include screen-height-1024-up {
+    margin: {
+      top: 30px;
+    }
+  }
+}
+.table {
+  width: 100%;
+  margin: {
+    top: 2rem;
+  }
+  @include screen-height-1024-up {
+    margin: {
+      top: 2rem;
+      padding: 3px;
+    }
+  }
+}

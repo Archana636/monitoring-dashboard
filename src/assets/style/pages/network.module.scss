@@ -1,0 +1,386 @@
+@use "../main.scss" as *;
+
+.container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  max-height: 100%;
+  padding: 0 2vw;
+  @include screen-laptop-md-up {
+    padding: 0 1vw;
+  }
+}
+.data3 {
+  text-align: right;
+  color: var(--time-color);
+  // font-size: 15px;
+  @include screen-height-600-up {
+    font-size: 2.5rem;
+    margin: {
+      top: -45px;
+    }
+    @include screen-height-1024-up {
+      font-size: 3.5rem;
+    }
+  }
+}
+.title {
+  text-align: center;
+  margin: 10px auto;
+  @include screen-height-600-up {
+    font-size: $typography-size-24;
+    margin: {
+      bottom: 0px;
+    }
+  }
+
+  @include screen-height-720-up {
+    font-size: $typography-size-32;
+    margin: {
+      bottom: 15px;
+    }
+  }
+  @include screen-height-800-up {
+    font-size: $typography-size-36;
+    margin: {
+      top: 30px;
+      bottom: 30px;
+    }
+  }
+  @include screen-height-900-up {
+    font-size: $typography-size-38;
+    margin: {
+      top: 20px;
+      bottom: 20px;
+    }
+  }
+  @include screen-height-1024-up {
+    font-size: $typography-size-40;
+    margin: {
+      top: 3px;
+      bottom: 3px;
+    }
+  }
+}
+.tableContainer {
+  @include screen-laptop-md-up {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    align-items: center;
+    margin: {
+      bottom: 1px;
+    }
+  }
+  //child
+  .header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: -20px;
+    bottom: -1px;
+    margin: {
+      bottom: 30px;
+    }
+    @include screen-height-720-up {
+      margin: {
+        bottom: 20px;
+      }
+    }
+    @include screen-height-800-up {
+      margin: {
+        bottom: 25px;
+      }
+    }
+    @include screen-height-900-up {
+      margin: {
+        bottom: 30px;
+      }
+      @include screen-height-1024-up {
+        font-size: $typography-size-52;
+
+        margin: {
+          bottom: 30px;
+        }
+      }
+    }
+
+    .datacenterName {
+      font-size: $typography-size-16;
+
+      margin: {
+        left: 10px;
+        margin-top: 60px;
+      }
+
+      @include screen-height-720-up {
+        font-size: $typography-size-20;
+      }
+      @include screen-height-900-up {
+        font-size: $typography-size-24;
+      }
+      @include screen-height-1024-up {
+        font-size: $typography-size-19;
+      }
+    }
+  }
+  .data1 {
+    color: white;
+    margin-top: -25px;
+    display: inline-block;
+    white-space: nowrap;
+    font-size: 25px;
+    @include screen-height-600-up {
+      font-size: $typography-size-10;
+    }
+    @include screen-height-1024-up {
+      font-size: $typography-size-40;
+    }
+  }
+  .data11 {
+    text-align: center;
+    margin-top: -10px;
+    @include screen-height-1024-up {
+      margin-top: -20px;
+      margin-bottom: 10px;
+    }
+  }
+  .data2 {
+    color: white;
+    margin-top: -25px;
+    display: inline-block;
+    white-space: nowrap;
+
+    text-align: right;
+    font-size: $typography-size-40;
+
+    @include screen-height-1024-up {
+      font-size: $typography-size-40;
+      margin: {
+        top: 5px;
+        right: 0;
+      }
+      @include screen-height-600-up {
+        font-size: $typography-size-18;
+      }
+    }
+  }
+
+  .data4 {
+    color: var(--total-color);
+    text-align: center;
+    @include screen-height-1024-up {
+      font-size: $typography-size-28;
+    }
+  }
+  .data5 {
+    color: var(--out-color);
+    text-align: center;
+    @include screen-height-1024-up {
+      font-size: $typography-size-28;
+    }
+    // @include screen-height-600-up {
+    //   font-size: $typography-size-64;
+    // }
+  }
+  .data6 {
+    color: var(--in-color);
+    text-align: center;
+    @include screen-height-1024-up {
+      font-size: $typography-size-28;
+    }
+  }
+  .col {
+    &_1 {
+      margin: {
+        top: 10px;
+      }
+    }
+    &_2 {
+      margin: {
+        top: 30px;
+      }
+    }
+  }
+  .graphContainer {
+    margin: {
+      bottom: 15px;
+    }
+  }
+  .infoTableContainer {
+    margin: {
+      top: 15px;
+    }
+  }
+
+  @include screen-laptop-md-up {
+    .col {
+      &_1 {
+        margin: {
+          top: 0;
+          right: 10px;
+        }
+      }
+      &_2 {
+        margin: {
+          top: 0;
+          left: 10px;
+        }
+      }
+    }
+    .graphContainer {
+      margin: {
+        bottom: 15px;
+      }
+    }
+    .infoTableContainer {
+      margin: {
+        top: 15px;
+      }
+    }
+  }
+
+  .graphContainer {
+    @include UI-glass-bg;
+    font-weight: 700;
+    .graph {
+      margin: 0 auto;
+      @include screen-height-600-up {
+        width: 90%;
+      }
+      @include screen-height-720-up {
+        width: auto;
+      }
+      @include screen-height-900-up {
+        width: 95%;
+      }
+      @include screen-height-1024-up {
+        width: auto;
+      }
+    }
+  }
+  .infoTableContainer {
+    // @include UI-glass-bg;
+    @include screen-height-600-up {
+    }
+  }
+
+  // @use "../main.scss" as *;
+
+  // $gap: 1vh;
+  // @mixin glass-bg {
+  //   background: rgba(255, 255, 255, 0.2);
+  //   box-shadow: 3.68519px 3.68519px 46.0649px 3.68519px rgba(0, 0, 0, 0.1);
+  //   backdrop-filter: blur(30.852px);
+  //   border-radius: 20px;
+  //   padding: {
+  //     left: 15px;
+  //     right: 15px;
+  //   }
+  //   margin: {
+  //     top: 20px;
+  //     bottom: 20px;
+  //     left: auto;
+  //     right: auto;
+  //   }
+  //   @include screen-laptop-sm-up {
+  //     margin: {
+  //       top: $gap;
+  //       left: auto;
+  //       right: auto;
+  //     }
+  //   }
+  //   @include screen-desktop-sm-up {
+  //   }
+  //   @include screen-desktop-md-up {
+  //     padding: 20px;
+  //   }
+  // }
+  // .container {
+  //   display: flex;
+  //   flex-direction: column;
+  //   min-height: 100vh;
+  //   max-height: 100%;
+  //   padding: {
+  //     left: 6.3vw;
+  //     right: 6.3vw;
+  //   }
+  //   background: var(--ash);
+
+  //   .title {
+  //     text-align: center;
+  //     font-size: 2.6rem;
+  //     margin: {
+  //       top: 10px;
+  //     }
+  //     @include screen-laptop-xl {
+  //       font-size: 2.8rem;
+  //       margin: {
+  //         top: 10px;
+  //       }
+  //     }
+  //     @include screen-height-600 {
+  //       font-size: 2.2rem;
+  //     }
+  //     @include screen-height-720-up {
+  //       font-size: 3rem;
+  //       margin: {
+  //         top: 5vh;
+  //         bottom: auto;
+  //       }
+  //     }
+  //   }
+  // }
+
+  // .tableContainer {
+  //   @include screen-laptop-sm-up {
+  //     display: grid;
+  //     grid-template-columns: repeat(2, minmax(0, 1fr));
+  //     column-gap: $gap;
+  //     align-items: center;
+  //     margin: {
+  //       top: auto;
+  //       bottom: auto;
+  //     }
+  //   }
+  //   //child
+  //   .header {
+  //     display: flex;
+  //     align-items: center;
+  //     justify-content: center;
+  //     .datacenterName {
+  //       font-size: 1.8rem;
+  //       margin: {
+  //         top: 10px;
+  //         bottom: 10px;
+  //         left: 20px;
+  //       }
+  //       @include screen-height-720-up {
+  //         margin: {
+  //           top: 30px;
+  //           bottom: 30px;
+  //         }
+  //       }
+  //     }
+  //   }
+  // }
+  // .graphContainer {
+  //   @include glass-bg;
+  //   font-weight: 700;
+  //   padding: {
+  //     top: 10px;
+  //     bottom: 10px;
+  //   }
+  //   .graph {
+  //     width: 90%;
+  //     height: 100%;
+  //     margin: 0 auto;
+  //   }
+  // }
+  // .infoTableContainer {
+  //   @include glass-bg;
+  //   padding: {
+  //     top: 0;
+  //     bottom: 0;
+  //   }
+  // }
+}
